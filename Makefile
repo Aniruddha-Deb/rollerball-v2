@@ -10,9 +10,11 @@ rollerball:
 	$(CC) $(CFLAGS) $(INCLUDES) $(SRC) -lpthread -o bin/rollerball
 
 package:
-	mkdir -p build
-	rm -rf build/*
-	mkdir build/rollerball build/rollerball/src build/rollerball/websrc
+	mkdir -p build 
+	mkdir -p build/rollerball
+	rm -f build/rollerball.zip
+	rm -rf build/rollerball/*
+	mkdir build/rollerball/src build/rollerball/websrc
 	cp -r include build/rollerball/include
 	cp src/*.hpp build/rollerball/src/
 	cp $(SRC) build/rollerball/src/
