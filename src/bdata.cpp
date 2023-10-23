@@ -129,8 +129,8 @@ void BoardData::set_8_2_layout() {
     this->b_rook_2   = pos(2,7);
 
     this->pawn_promo_squares[0] = pos(2,0);
-    this->pawn_promo_squares[0] = pos(2,1);
-    this->pawn_promo_squares[0] = pos(2,2);
+    this->pawn_promo_squares[1] = pos(2,1);
+    this->pawn_promo_squares[2] = pos(2,2);
     this->n_pawn_promo_squares = 3;
 }
 
