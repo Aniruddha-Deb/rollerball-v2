@@ -167,7 +167,7 @@ std::unordered_set<U16> construct_knight_moves(const U8 p0, const U8 *board, con
     return knight_moves;
 }
 
-bool can_promote(U8 pos, U8 *promo, int n_promo, bool promote) {
+bool can_promote(U8 pos, U8 *promo, int n_promo) {
     for (int i=0; i<n_promo; i++) {
         if (promo[i] == pos) return true;
     }
@@ -184,7 +184,7 @@ std::unordered_set<U16> construct_pawn_moves(const U8 p0, const U8 *board, const
         if (!inboard(bmask, getx(p0)-1, y)) continue;
         U8 p1 = pos(getx(p0)-1, y);
         if (!occupied(board, p1, color)) {
-            if (can_promote(p1, promo, n_promo, promote)) {
+            if (promote && can_promote(p1, promo, n_promo)) {
                 pawn_moves.insert(move_promo(p0, p1, PAWN_ROOK));
                 pawn_moves.insert(move_promo(p0, p1, PAWN_BISHOP));
             }
