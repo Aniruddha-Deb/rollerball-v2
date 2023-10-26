@@ -19,7 +19,7 @@ package:
 	cp src/*.hpp build/rollerball/src/
 	cp $(SRC) build/rollerball/src/
 	cp -r scripts build/rollerball/scripts
-	cp Makefile build/rollerball/
+	cp Makefile README.md build/rollerball/
 	cd web && npm run build
 	cp -r web/src build/rollerball/websrc/src
 	cp -r web/public build/rollerball/websrc/public
