@@ -128,7 +128,6 @@ void UCIWSServer::on_go(std::vector<std::string>& toks) {
     e->time_left = std::chrono::milliseconds(stoi(toks[1]));
     this->game_thread = std::thread([this]() {
         e->find_best_move(*b);
-        sleep(2);
         server.broadcastMessage("bestmove " + move_to_str(e->best_move));
         b->do_move_(e->best_move);
     });
