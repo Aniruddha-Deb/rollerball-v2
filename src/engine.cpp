@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <random>
 #include <iostream>
+#include <thread>
 
 #include "board.hpp"
 #include "engine.hpp"
@@ -32,4 +33,7 @@ void Engine::find_best_move(const Board& b) {
         );
         this->best_move = moves[0];
     }
+
+    // just for debugging, to slow down the moves
+    std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 }
