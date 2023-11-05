@@ -1,5 +1,6 @@
 #include <string>
 #include <algorithm>
+#include <cstring>
 #include "board.hpp"
 #include "constants.hpp"
 

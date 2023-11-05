@@ -188,6 +188,7 @@ function on_bestmove(side, tokens) {
     // check if it's a null move. If yes, declare checkmate/stalemate
     if (move === '0000') {
         stop_game(`${side} gave a null move, indicating either Checkmate or Stalemante`);
+        return;
     }
 
     state.game.move_list.push(move);
