@@ -327,9 +327,6 @@ std::unordered_set<U16> Board::get_legal_moves() const {
         if (!c.in_check()) {
             legal_moves.insert(move);
         }
-        else {
-            std::cout << "Move " << move_to_str(move) << " is illegal" << std::endl;
-        }
 
         c.undo_last_move_without_flip_(move);
     }
