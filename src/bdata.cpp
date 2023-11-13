@@ -135,7 +135,12 @@ void BoardData::set_8_2_layout() {
     this->n_pawn_promo_squares = 3;
 }
 
-BoardData::BoardData(BoardType btype) {
+BoardData::BoardData(BoardType btype): 
+    board_0{0}, 
+    board_90{0}, 
+    board_180{0}, 
+    board_270{0}, 
+    pawn_promo_squares{0} {
 
     this->board_type = btype;
 
